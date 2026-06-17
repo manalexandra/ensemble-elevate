@@ -15,6 +15,7 @@ import {
   Phone,
 } from "lucide-react";
 import logoAsset from "../assets/logo.svg.asset.json";
+import QAiLogo from "../assets/Logo.svg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -86,7 +87,7 @@ function Header() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 grid grid-cols-[1fr_auto_1fr] items-center">
         <a href="#top" className="flex items-center" aria-label="Ensemble QAi">
-          <img src={logoAsset.url} alt="Ensemble" className="logo-wash h-6 w-auto" />
+          <img src={QAiLogo} alt="Ensemble" className="h-6 w-auto" />
         </a>
         <nav className="hidden md:flex items-center justify-center gap-10 text-sm text-muted-foreground">
           <a href="#what" className="hover:text-primary transition-colors">Platform</a>
@@ -140,10 +141,7 @@ function Hero() {
           </span>
         </Reveal>
         <Reveal delay={0.1}>
-          <h1 className="mt-6 text-5xl md:text-7xl font-bold tracking-tight">
-            <span className="text-foreground">Ensemble </span>
-            <span className="text-gradient-accent">QAi</span>
-          </h1>
+          <h1 className="mt-6 text-5xl md:text-7xl font-bold tracking-tight flex items-center justify-center"><span className="text-gradient-accent"><img src={QAiLogo} alt="QAi Logo" className="h-12 md:h-16" /></span></h1>
         </Reveal>
         <Reveal delay={0.15}>
           <h2 className="mt-4 text-2xl md:text-4xl font-display font-semibold text-foreground/90">
@@ -176,7 +174,7 @@ function Globe3D() {
   return (
     <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] h-[640px] md:w-[860px] md:h-[860px]">
       <div className="absolute inset-0 rounded-full animate-pulse-glow"
-           style={{ background: "radial-gradient(circle, oklch(0.74 0.18 55 / 0.25), transparent 60%)" }} />
+        style={{ background: "radial-gradient(circle, oklch(0.74 0.18 55 / 0.25), transparent 60%)" }} />
       <div className="absolute inset-0 animate-spin-slow">
         <div className="absolute inset-0 rounded-full border border-primary/30" />
         <div className="absolute inset-[8%] rounded-full border border-primary/20" />
@@ -236,8 +234,11 @@ function WhatIs() {
     <section id="what" className="relative py-28">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <Reveal>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            What is <span className="text-gradient-accent">Ensemble QAi</span>
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold tracking-tight flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+            <span className="text-foreground">What is</span>
+            <span className="text-gradient-accent mt-2">
+              <img src={QAiLogo} alt="QAi Logo" className="h-8 md:h-12" />
+            </span>
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
@@ -336,7 +337,7 @@ function SupportedDevices() {
             </svg>
 
             <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full opacity-30 blur-3xl"
-                 style={{ background: "var(--gradient-accent)" }} />
+              style={{ background: "var(--gradient-accent)" }} />
 
             <motion.div
               className="relative grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-3"
@@ -478,7 +479,7 @@ function FeatureCard({ icon, title, text }: Feature) {
       className="surface-card group relative h-full p-7 overflow-hidden hover:border-primary/40 transition-colors"
     >
       <div className="absolute inset-x-0 -top-px h-px opacity-0 group-hover:opacity-100 transition-opacity"
-           style={{ background: "linear-gradient(90deg, transparent, var(--color-primary), transparent)" }} />
+        style={{ background: "linear-gradient(90deg, transparent, var(--color-primary), transparent)" }} />
       <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/20">
         {icon}
       </div>
@@ -588,17 +589,17 @@ function TrustedBy() {
 function CTA() {
   return (
     <section className="relative py-20">
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-5xl px-6 ">
         <Reveal>
           <div className="relative overflow-hidden rounded-2xl border border-border bg-card/60 backdrop-blur px-8 py-10 md:px-12 md:py-12">
             <div className="absolute inset-y-0 left-0 w-1"
-                 style={{ background: "linear-gradient(180deg, transparent, var(--color-primary), transparent)" }} />
+              style={{ background: "linear-gradient(180deg, transparent, var(--color-primary), transparent)" }} />
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10">
-              <img src={logoAsset.url} alt="Ensemble" className="logo-wash h-7 md:h-8 w-auto shrink-0" />
+              <img src={QAiLogo} alt="Ensemble" className="h-7 md:h-8 w-auto shrink-0" />
               <div className="hidden md:block h-12 w-px bg-border" />
               <div className="flex-1 text-center md:text-left">
                 <h2 className="font-display text-2xl md:text-3xl font-semibold">
-                  See Ensemble <span className="text-gradient-accent">QAi</span> in action
+                  See Ensemble QAi in action
                 </h2>
                 <p className="mt-2 text-muted-foreground">
                   Walk through the platform with our team and discover how AI-driven testing fits your media workflow.
@@ -625,7 +626,7 @@ function Footer() {
     <footer className="relative border-t border-border mt-10">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid gap-12 md:grid-cols-4">
         <div>
-          <img src={logoAsset.url} alt="Ensemble" className="logo-wash h-7 w-auto" />
+          <img src={QAiLogo} alt="Ensemble" className="h-7 w-auto" />
         </div>
         <FooterCol
           title="Locations"
