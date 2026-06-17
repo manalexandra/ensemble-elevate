@@ -130,6 +130,9 @@ function Hero() {
           }}
         />
         <Globe3D />
+
+
+        
         <Particles />
       </div>
 
