@@ -85,7 +85,7 @@ function Index() {
 function Header() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 grid grid-cols-[auto_1fr_auto] items-center">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between">
         
         {/* Left */}
         <a href="#top" className="flex items-center" aria-label="Ensemble QAi">
@@ -93,7 +93,7 @@ function Header() {
         </a>
 
         {/* Center */}
-        <nav className="hidden md:flex items-center justify-center gap-10 text-sm text-muted-foreground">
+        <nav className="hidden md:flex items-center gap-10 text-sm text-muted-foreground absolute left-1/2 -translate-x-1/2">
           <a href="#what" className="hover:text-primary transition-colors">Platform</a>
           <a href="#devices" className="hover:text-primary transition-colors">Devices</a>
           <a href="#features" className="hover:text-primary transition-colors">Features</a>
@@ -101,15 +101,13 @@ function Header() {
         </nav>
 
         {/* Right */}
-        <div className="justify-self-end">
-          <a
-            href="mailto:qai-contact@ensemble.com"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition shadow-[0_0_24px_-6px_var(--color-primary)]"
-          >
-            Contact Us
-            <ArrowRight className="h-3.5 w-3.5" />
-          </a>
-        </div>
+        <a
+          href="mailto:qai-contact@ensemble.com"
+          className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition shadow-[0_0_24px_-6px_var(--color-primary)]"
+        >
+          Contact Us
+          <ArrowRight className="h-3.5 w-3.5" />
+        </a>
 
       </div>
     </header>
