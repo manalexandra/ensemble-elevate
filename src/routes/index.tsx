@@ -84,28 +84,35 @@ function Index() {
 /* ---------- Header ---------- */
 function Header() {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 grid grid-cols-[auto_1fr_auto] items-center">
-      <a href="#top" className="flex items-center mt-2" aria-label="Ensemble QAi">
-        <img src={QAiLogo} alt="Ensemble" className="h-6 w-auto" />
-      </a>
-
-      <nav className="hidden md:flex items-center justify-center gap-10 text-sm text-muted-foreground">
-        <a href="#what" className="hover:text-primary transition-colors">Platform</a>
-        <a href="#devices" className="hover:text-primary transition-colors">Devices</a>
-        <a href="#features" className="hover:text-primary transition-colors">Features</a>
-        <a href="#expertise" className="hover:text-primary transition-colors">Expertise</a>
-      </nav>
-
-      <div className="flex justify-end">
-        <a
-          href="mailto:qai-contact@ensemble.com"
-          className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition shadow-[0_0_24px_-6px_var(--color-primary)]"
-        >
-          Contact Us
-          <ArrowRight className="h-3.5 w-3.5" />
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 grid grid-cols-[auto_1fr_auto] items-center">
+        
+        {/* Left */}
+        <a href="#top" className="flex items-center" aria-label="Ensemble QAi">
+          <img src={QAiLogo} alt="Ensemble" className="h-6 w-auto" />
         </a>
+
+        {/* Center */}
+        <nav className="hidden md:flex items-center justify-center gap-10 text-sm text-muted-foreground">
+          <a href="#what" className="hover:text-primary transition-colors">Platform</a>
+          <a href="#devices" className="hover:text-primary transition-colors">Devices</a>
+          <a href="#features" className="hover:text-primary transition-colors">Features</a>
+          <a href="#expertise" className="hover:text-primary transition-colors">Expertise</a>
+        </nav>
+
+        {/* Right */}
+        <div className="justify-self-end">
+          <a
+            href="mailto:qai-contact@ensemble.com"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:opacity-90 transition shadow-[0_0_24px_-6px_var(--color-primary)]"
+          >
+            Contact Us
+            <ArrowRight className="h-3.5 w-3.5" />
+          </a>
+        </div>
+
       </div>
-    </div>
+    </header>
   );
 }
 
@@ -132,7 +139,7 @@ function Hero() {
         <Globe3D />
 
 
-        
+
         <Particles />
       </div>
 
