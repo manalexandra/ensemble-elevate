@@ -14,7 +14,6 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import logoAsset from "../assets/logo.svg.asset.json";
 import QAiLogo from "../assets/Logo.svg";
 
 export const Route = createFileRoute("/")({
