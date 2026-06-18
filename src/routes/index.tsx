@@ -86,7 +86,7 @@ function Header() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between">
-        
+
         {/* Left */}
         <a href="#top" className="flex items-center" aria-label="Ensemble QAi">
           <img src={QAiLogo} alt="Ensemble" className="h-6 w-auto" />
@@ -312,6 +312,20 @@ const devices: { render: ReactNode; key: string }[] = [
     ),
   },
   { key: "vega", render: <span className="brand-vega text-2xl">Vega</span> },
+  {
+    key: "more", render: (
+      <span className="block gap-1">
+        <span className="block">
+          <span className="brand-vega text-xl">More</span>
+        </span>
+        <span className="block">
+          <span className="brand-vega text-sm">to come...</span>
+        </span>
+      </span>
+    )
+  },
+
+
 ];
 
 function SupportedDevices() {
@@ -362,11 +376,23 @@ function SupportedDevices() {
                   key={d.key}
                   variants={fadeUp}
                   whileHover={{ y: -4, scale: 1.05 }}
-                  className="group relative aspect-square flex items-center justify-center rounded-2xl border border-border bg-background/40 backdrop-blur transition-colors hover:border-primary/60"
+                  className={`group relative aspect-square flex items-center justify-center rounded-2xl border border-border bg-background/40 backdrop-blur transition-colors hover:border-primary/60
+      ${d.key === "more"
+                      ? "col-start-2 md:col-auto lg:col-start-5"
+                      : ""
+                    }
+    `}
                 >
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
-                    style={{ background: "radial-gradient(120px 80px at 50% 0%, oklch(0.74 0.18 55 / 0.30), transparent 70%)" }} />
-                  <div className="relative text-foreground/95">{d.render}</div>
+                  <div
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
+                    style={{
+                      background:
+                        "radial-gradient(120px 80px at 50% 0%, oklch(0.74 0.18 55 / 0.30), transparent 70%)",
+                    }}
+                  />
+                  <div className="relative text-foreground/95 flex items-center justify-center text-center px-2 break-words">
+                    {d.render}
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
@@ -646,11 +672,11 @@ function Footer() {
             <Phone className="h-3.5 w-3.5" /> Get in Touch
           </h4>
           <ul className="mt-5 space-y-2 text-foreground/90 text-sm">
-          <span className="font-semibold block">Vancouver</span>
+            <span className="font-semibold block">Vancouver</span>
             <li><span className="text-muted-foreground">MAIN LINE:</span> 1.604.231.9510</li>
             <li><span className="text-muted-foreground">TOLL FREE:</span> 1.855.607.3279</li>
             <li><span className="text-muted-foreground">FAX:</span> 1.604.231.9545</li>
-          <span className="font-semibold block mt-5">Baia Mare</span>
+            <span className="font-semibold block mt-5">Baia Mare</span>
             <li><span className="text-muted-foreground">MAIN LINE:</span> +40 745 817 758</li>
             <li><span className="text-muted-foreground">EMAIL:</span> office@ensemblesoftware.ro</li>
           </ul>
