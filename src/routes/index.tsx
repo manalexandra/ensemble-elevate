@@ -646,9 +646,13 @@ function Footer() {
             <Phone className="h-3.5 w-3.5" /> Get in Touch
           </h4>
           <ul className="mt-5 space-y-2 text-foreground/90 text-sm">
+          <span className="font-semibold block">Vancouver</span>
             <li><span className="text-muted-foreground">MAIN LINE:</span> 1.604.231.9510</li>
             <li><span className="text-muted-foreground">TOLL FREE:</span> 1.855.607.3279</li>
             <li><span className="text-muted-foreground">FAX:</span> 1.604.231.9545</li>
+          <span className="font-semibold block mt-5">Baia Mare</span>
+            <li><span className="text-muted-foreground">MAIN LINE:</span> +40 745 817 758</li>
+            <li><span className="text-muted-foreground">EMAIL:</span> office@ensemblesoftware.ro</li>
           </ul>
         </div>
         <div>
