@@ -316,10 +316,10 @@ const devices: { render: ReactNode; key: string }[] = [
     key: "more", render: (
       <span className="block gap-1">
         <span className="block">
-          <span className="brand-vega text-xl">More</span>
+          <span className="text-foreground text-xl">More</span>
         </span>
         <span className="block">
-          <span className="brand-vega text-sm">to come...</span>
+          <span className="text-foreground text-sm">to come...</span>
         </span>
       </span>
     )
